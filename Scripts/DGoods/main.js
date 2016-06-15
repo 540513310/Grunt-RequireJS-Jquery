@@ -1,0 +1,40 @@
+﻿require.config({
+    baseUrl: "/Scripts/DGoods/global",
+    paths: {
+        jquery: "../../jquery-1.10.2.min",
+        jqueryform: "../../jquery.unobtrusive-ajax.min",
+        jqueryval: "../../jquery.validate",
+        jqueryvalunobtrusive: "../../jquery.validate.unobtrusive.min",
+        jquerysuperSlide: "../../jquery.SuperSlide.2.1.2",
+        jquerytmpl: "../../plugins/jquerytmpl/jquery.tmpl.min",
+        jqueryihgcalendar: '../../lhgcalendar/lhgcore.lhgcalendar.min',
+        jqueryihgdialog: '../../lhgcalendar/lhgcore.lhgdialog.min',
+        jqueryui: '../../plugins/jqueryui/jquery-ui.min',
+        respondscreen: "../../respond-screen",
+        jquerycrsdomain: '../../plugins/jquerycrsdomain/jquery.xdomainrequest.min',
+        jqueryhisotry: '../../plugins/jqueryhistory/jquery.history',
+        jquerynotify: '../../plugins/jquerynotify/notify',
+        jquerynicescroll: '../../plugins/jquerynicescroll/jquery.nicescroll',
+        socketio: '../../plugins/socket.io/socket.io-1.4.5',
+        domReady: '../../plugins/domReady/domReady',
+    },
+    shim: {
+        jquery: { exports: '$' },
+        jqueryform: ['jquery'],
+        jqueryval: ['jquery'],
+        jqueryvalunobtrusive: ['jquery'],
+        jquerysuperSlide: ['jquery'],
+        jquerytmpl: { deps: ['jquery'], exports: "jquerytmpl" },
+        jquerycrsdomain: { deps: ['jquery'], exports: 'jquerycrsdomain' },
+        jqueryihgcalendar: ['jquery'],
+        jqueryihgdialog: ['jquery'],
+        jqueryui: { deps: ["jquery"] },
+        jqueryhisotry: { deps: ["jquery"] },
+        jquerynicescroll: { deps: ["jquery"] },
+        jquerynotify: { deps: ["jquery"] },
+        socketio: { deps: ['jquery'], exports: 'io' },
+    },
+});
+require(["app"], function (app) {
+    app.init();
+});

@@ -1,0 +1,19 @@
+﻿$.extend($.validator.messages, {
+    required: "*",
+    remote: "验证失败",
+    email: "格式错误",
+    url: "格式错误",
+    date: "格式错误",
+    dateISO: "格式错误(ISO).",
+    number: "非数字",
+    digits: "非整数",
+    creditcard: "卡号有误",
+    equalTo: "输入有误",
+    accept: "后缀有误",
+    maxlength: $.validator.format("最大长度{0}个字符"),
+    minlength: $.validator.format("最少长度{0}个字符"),
+    rangelength: $.validator.format("内容长度应保持在{0}到{1}位之间"),
+    range: $.validator.format("范围{0}至{1}以内的值"),
+    max: $.validator.format("最大值{0}"),
+    min: $.validator.format("最小值{0}")
+});
